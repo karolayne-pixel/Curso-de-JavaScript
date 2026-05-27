@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Multiplicação</title>
+</head>
+<body>
+    <label>Número 1:</label>
+    <input type="number" id="numero1">
+    <br>
+    <label>Número 2:</label>
+    <input type="number" id="numero2">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado">Exibir resultado</p>
+
+    <script>
+        function calcular() {
+            let n1 = Number(document.getElementById("numero1").value);
+            let n2 = Number(document.getElementById("numero2").value);
+
+            document.getElementById("resultado").innerHTML = n1 * n2;
+        }
+    </script>
+</body>
+</html>

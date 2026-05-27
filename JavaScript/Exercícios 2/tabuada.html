@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabuada</title>
+</head>
+<body>
+    <form>
+        <label>Informe um número de 1 a 10:</label>
+        <input type="number" id="num"> 
+        <button type="button" onclick="gerar()">Gerar Tabuada</button>
+    </form>
+
+    <p id="Tab"></p> 
+
+    <script>
+        function gerar() {
+            let num = Number(document.getElementById('num').value); [8]
+            let tab = document.getElementById('Tab');
+            let texto = "";
+
+            if (num < 1 || num > 10 || num == null) { [9, 10]
+                tab.innerHTML = "Entrada inválida"; [10]
+            } else {
+                let conte = 0;
+                while (conte <= 10) { [7]
+                    texto += num + " x " + conte + " = " + (num * conte) + "<br>"; [7, 8]
+                    conte++;
+                }
+                tab.innerHTML = texto; [8]
+            }
+        }
+    </script>
+</body>
+</html>

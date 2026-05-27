@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Laços de Repetição</title>
+</head>
+<body>
+    <h3>Laço While</h3>
+    <p id="while"></p>
+
+    <h3>Laço For</h3>
+    <p id="for"></p>
+
+    <h3>Tabuada (Aplicação)</h3>
+    <p id="tab"></p>
+
+    <script>
+        let contador = 1;
+        let teste = ""; 
+
+        while (contador <= 5) {
+            teste += "O número é " + contador + "<br>";
+            contador++; 
+        }
+        document.getElementById('while').innerHTML = teste; [4]
+
+        let texto = "";
+
+        for (let conte = 1; conte <= 10; conte++) {
+            texto += "O número é " + conte + "<br>";
+        }
+        document.getElementById('for').innerHTML = texto; [6]
+
+
+        let res = "";
+        for (let conte = 0; conte <= 10; conte++) {
+            res += "5 x " + conte + " = " + (5 * conte) + "<br>";
+        }
+        document.getElementById('tab').innerHTML = res; [7]
+
+
+        
+        console.log("Números de 1 a 200:");
+        for (let i = 1; i <= 200; i++) {
+            console.log(i);
+        }
+
+        let numUsuario = prompt("Informe um número de 1 a 10 para ver a tabuada:");
+        if (numUsuario !== null) {
+            let tabDinamica = "";
+            for (let i = 0; i <= 10; i++) {
+                tabDinamica += numUsuario + " x " + i + " = " + (numUsuario * i) + "<br>";
+            }
+            document.body.innerHTML += "<h3>Tabuada do " + numUsuario + "</h3>" + tabDinamica;
+        }
+
+    </script>
+</body>
+</html>

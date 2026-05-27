@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Preço</title>
+</head>
+<body>
+    <label>Preço do álcool:</label>
+    <input type="number" id="prc"> <br>
+    
+    <label>Preço da gasolina:</label>
+    <input type="number" id="gasolina"> <br>
+    
+    <button onclick="calcular()">Calcular</button>
+    
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+            let precoAlcool = Number(document.getElementById('prc').value);
+            let precoGasolina = Number(document.getElementById('gasolina').value);
+            let resultado = document.getElementById('resultado');
+            
+            let valor = precoAlcool / precoGasolina;
+
+            if (valor > 0.7) {
+                resultado.innerHTML = "Melhor usar gasolina";
+            } else {
+                resultado.innerHTML = "Melhor usar álcool";
+            }
+        }
+    </script>
+</body>
+</html>
